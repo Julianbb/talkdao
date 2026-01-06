@@ -15,17 +15,21 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-black backdrop-blur-md z-50 border-b border-[#262626]">
+    <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-md z-50 border-b border-[#262626]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center gap-3">
-              <Image
-                src="/logo-circle.png"
-                alt="说道科技 Logo"
-                width={80}
-                height={80}
-              />
+            <div className="flex-shrink-0 flex items-center gap-3 group">
+              <div className="relative">
+                <Image
+                  src="/logo-circle.png"
+                  alt="说道科技 Logo"
+                  width={80}
+                  height={80}
+                  className="group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+              </div>
               <div className="flex flex-col -space-y-1">
                 <span className="text-2xl font-bold text-white">
                   说道科技
@@ -40,31 +44,31 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer nav-link-underline"
             >
               首页
             </button>
             <button
               onClick={() => scrollToSection("features")}
-              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer nav-link-underline"
             >
               特色
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer nav-link-underline"
             >
               服务
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer nav-link-underline"
             >
               关于我们
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-6 py-2.5 bg-white text-black rounded-lg hover:bg-[#E6E6E6] transition-all font-medium cursor-pointer"
+              className="px-6 py-2.5 btn-primary text-white rounded-lg font-medium cursor-pointer shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
             >
               联系我们
             </button>
@@ -124,7 +128,7 @@ export default function Navigation() {
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-3 py-2 text-black bg-white hover:bg-[#E6E6E6] rounded-md font-medium cursor-pointer"
+              className="block w-full text-left px-3 py-2 btn-primary text-white rounded-md font-medium cursor-pointer shadow-lg shadow-blue-500/20"
             >
               联系我们
             </button>
