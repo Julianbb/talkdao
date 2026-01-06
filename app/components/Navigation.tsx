@@ -15,7 +15,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-[#0D0D0D] backdrop-blur-md z-50 border-b border-gray-800/50">
+    <nav className="fixed top-0 w-full bg-black backdrop-blur-md z-50 border-b border-[#262626]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
@@ -23,14 +23,14 @@ export default function Navigation() {
               <Image
                 src="/logo-circle.png"
                 alt="说道科技 Logo"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <div className="flex flex-col -space-y-1">
                 <span className="text-2xl font-bold text-white">
                   说道科技
                 </span>
-                <span className="text-base font-semibold tracking-wider text-gray-400" style={{ fontFamily: 'var(--font-geist-mono)' }}>
+                <span className="text-base font-semibold tracking-wider text-[#A6A6A6]" style={{ fontFamily: 'var(--font-geist-mono)' }}>
                   TALKDAO
                 </span>
               </div>
@@ -40,31 +40,31 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
             >
               首页
             </button>
             <button
               onClick={() => scrollToSection("features")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
             >
               特色
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
             >
               服务
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-[#A6A6A6] hover:text-white transition-colors cursor-pointer"
             >
               关于我们
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-200 transition-all font-semibold"
+              className="px-6 py-2.5 bg-white text-black rounded-lg hover:bg-[#E6E6E6] transition-all font-medium cursor-pointer"
             >
               联系我们
             </button>
@@ -73,7 +73,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-[#A6A6A6] hover:text-white focus:outline-none cursor-pointer"
             >
               <svg
                 className="h-6 w-6"
@@ -96,35 +96,35 @@ export default function Navigation() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-700">
+        <div className="md:hidden bg-black border-t border-[#262626]">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <button
               onClick={() => scrollToSection("home")}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-900 rounded-md"
+              className="block w-full text-left px-3 py-2 text-[#A6A6A6] hover:text-white hover:bg-[#121212] rounded-md cursor-pointer"
             >
               首页
             </button>
             <button
               onClick={() => scrollToSection("features")}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-900 rounded-md"
+              className="block w-full text-left px-3 py-2 text-[#A6A6A6] hover:text-white hover:bg-[#121212] rounded-md cursor-pointer"
             >
               特色
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-900 rounded-md"
+              className="block w-full text-left px-3 py-2 text-[#A6A6A6] hover:text-white hover:bg-[#121212] rounded-md cursor-pointer"
             >
               服务
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-900 rounded-md"
+              className="block w-full text-left px-3 py-2 text-[#A6A6A6] hover:text-white hover:bg-[#121212] rounded-md cursor-pointer"
             >
               关于我们
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-3 py-2 text-black bg-white hover:bg-gray-200 rounded-md font-semibold"
+              className="block w-full text-left px-3 py-2 text-black bg-white hover:bg-[#E6E6E6] rounded-md font-medium cursor-pointer"
             >
               联系我们
             </button>
